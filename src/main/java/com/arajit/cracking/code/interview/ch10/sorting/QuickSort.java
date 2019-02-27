@@ -13,23 +13,24 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
-  void indent(int n){
-    for(int i=0;i<n;i++){
+  void indent(int n) {
+    for (int i = 0; i < n; i++) {
       System.out.print("  ");
     }
   }
 
-  void sort(int[] arr, int left, int right,int indentLen) {
+  void sort(int[] arr, int left, int right, int indentLen) {
     indent(indentLen);
     System.out.print("quickSort(");
     Arrays.stream(arr).forEach(System.out::print);
-    System.out.println(","+left+","+right+")");
+    System.out.println("," + left + "," + right + ")");
     int index = partition(arr, left, right);
+    System.out.println("index:" + index);
     if (left < index - 1) { // Sort left half
-      sort(arr, left, index - 1,indentLen+=2);
+      sort(arr, left, index - 1, indentLen += 2);
     }
     if (index < right) { // Sort right half
-      sort(arr, index, right,indentLen+=2);
+      sort(arr, index, right, indentLen += 2);
     }
   }
 
