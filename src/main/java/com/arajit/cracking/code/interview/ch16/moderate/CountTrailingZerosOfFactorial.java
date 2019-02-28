@@ -81,7 +81,6 @@ public class CountTrailingZerosOfFactorial {
     int count = 0;
     for (int i = 5; number / i > 0; i *= 5) {
       count += number / i;
-      System.out.println("i:"+i+",multiple:"+count);
     }
     return count;
   }

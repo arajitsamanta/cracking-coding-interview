@@ -34,7 +34,7 @@ public class CountTrailingZerosOfFactorialTest {
   public void count_trailing_zeros_efficient()  {
     assertEquals(31,countTrailingZeros.countEfficient(126));
     assertEquals(0,countTrailingZeros.countEfficient(0));
-    assertEquals(0,countTrailingZeros.countEfficient(-25));
+    assertEquals(-1,countTrailingZeros.countEfficient(-25));
     timer.start();
     assertEquals(3,countTrailingZeros.countEfficient(19));
     System.out.println("Time taken:"+timer.timeTaken() +"ms");
